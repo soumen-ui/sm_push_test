@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Animated CSS Buttons</title>
+<style>
+
+body{
+  margin: 0;
+  padding: 0;
+  background: #2d3436;
+}
+.zmiddle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-51%,-51%);
+}
+.g_btn{
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-size: 14px;
+  font-family: "montserrat";
+  text-decoration: none;
+  margin: 30px 0;
+  border: 2px solid #ff7675;
+  padding: 14px 60px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s all ease;
+  z-index:9;
+  background:#888;
+}
+.g_btn::before{
+  background: #ff7675;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+/*.g_btn::after{
+  background: #888;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom:0;
+  right:0;
+  left: 0;
+  width:100%;
+  z-index: -2;
+
+}
+*/.g_btn:hover{
+  background: #ff7675;}
+
+.cg_btn1::before{
+  width: 0%;
+  height: 100%;
+}
+
+.cg_btn1:hover::before{
+  width: 100%;
+}
+
+
+.cg_btn2::before{
+  width: 100%;
+  height: 0%;
+}
+.cg_btn2:hover::before{
+  height: 100%;
+}
+
+.cg_btn3::before{
+  width: 100%;
+  height: 0%;
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+.cg_btn3:hover::before{
+  height: 380%;
+}
+
+.cg_btn4::before{
+  width: 100%;
+  height: 0%;
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+.cg_btn4:hover::before{
+  height: 380%;
+}
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="middle">
+      <a href="" class="g_btn cg_btn1">Hover Me</a>
+      <a href="" class="g_btn cg_btn2">Hover Me</a>
+      <a href="" class="g_btn cg_btn3">Hover Me</a>
+      <a href="" class="g_btn cg_btn4">Hover Me Hover Me Hover   </a>
+    </div>
+  </body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
